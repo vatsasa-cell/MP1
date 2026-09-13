@@ -1,0 +1,802 @@
+[
+  {
+    "strategy": "zero_shot",
+    "snippet_id": "j01",
+    "raw_response": "```json\n{\n  \"company\": \"Acme Corp\",\n  \"role\": \"Senior Software Engineer\",\n  \"years_experience_required\": 5\n}\n```",
+    "extracted": {
+      "company": "Acme Corp",
+      "role": "Senior Software Engineer",
+      "years_experience_required": 5
+    },
+    "parse_success": true,
+    "prompt_tokens": 86,
+    "completion_tokens": 34,
+    "cost_usd": 3.3299999999999996e-05,
+    "latency_s": 1.370467059983639,
+    "error": null,
+    "accuracy": 3,
+    "llm_judge_score": 25,
+    "judge_reasoning": "All three fields in the candidate extraction are correct and fully grounded in the snippet. The company, role, and years of experience required match the information provided in the job snippet.",
+    "judge_cost_usd": 0.001175
+  },
+  {
+    "strategy": "zero_shot",
+    "snippet_id": "j02",
+    "raw_response": "```json\n{\n  \"company\": \"Northwind Ltd.\",\n  \"role\": \"Data Analyst\",\n  \"years_experience_required\": 2\n}\n```",
+    "extracted": {
+      "company": "Northwind Ltd.",
+      "role": "Data Analyst",
+      "years_experience_required": 2
+    },
+    "parse_success": true,
+    "prompt_tokens": 86,
+    "completion_tokens": 33,
+    "cost_usd": 3.27e-05,
+    "latency_s": 1.2724172779999208,
+    "error": null,
+    "accuracy": 2,
+    "llm_judge_score": 20,
+    "judge_reasoning": "All three fields are effectively correct. The only issue is a minor formatting detail: the company name includes a period in the candidate extraction ('Northwind Ltd.'), which is not present in the reference extraction ('Northwind Ltd').",
+    "judge_cost_usd": 0.0012700000000000003
+  },
+  {
+    "strategy": "zero_shot",
+    "snippet_id": "j03",
+    "raw_response": "```json\n{\n  \"company\": \"Globex International\",\n  \"role\": \"Product Manager - Growth\",\n  \"years_experience_required\": 4\n}\n```",
+    "extracted": {
+      "company": "Globex International",
+      "role": "Product Manager - Growth",
+      "years_experience_required": 4
+    },
+    "parse_success": true,
+    "prompt_tokens": 91,
+    "completion_tokens": 35,
+    "cost_usd": 3.465e-05,
+    "latency_s": 1.1939186480012722,
+    "error": null,
+    "accuracy": 3,
+    "llm_judge_score": 25,
+    "judge_reasoning": "All three fields in the candidate extraction are correct and fully grounded in the job snippet. The company, role, and years of experience required match exactly with the reference extraction and the snippet.",
+    "judge_cost_usd": 0.0012125
+  },
+  {
+    "strategy": "zero_shot",
+    "snippet_id": "j04",
+    "raw_response": "```json\n{\n  \"company\": \"Initech\",\n  \"role\": \"Lead DevOps Engineer\",\n  \"years_experience_required\": 6\n}\n```",
+    "extracted": {
+      "company": "Initech",
+      "role": "Lead DevOps Engineer",
+      "years_experience_required": 6
+    },
+    "parse_success": true,
+    "prompt_tokens": 92,
+    "completion_tokens": 34,
+    "cost_usd": 3.42e-05,
+    "latency_s": 0.8922150489815976,
+    "error": null,
+    "accuracy": 3,
+    "llm_judge_score": 25,
+    "judge_reasoning": "All three fields in the candidate extraction are correct and fully grounded in the snippet. The company, role, and years of experience required match the information provided in the job snippet.",
+    "judge_cost_usd": 0.00119
+  },
+  {
+    "strategy": "zero_shot",
+    "snippet_id": "j05",
+    "raw_response": "```json\n{\n  \"company\": \"Hooli\",\n  \"role\": \"Junior Frontend Developer\",\n  \"years_experience_required\": null\n}\n```",
+    "extracted": {
+      "company": "Hooli",
+      "role": "Junior Frontend Developer",
+      "years_experience_required": null
+    },
+    "parse_success": true,
+    "prompt_tokens": 89,
+    "completion_tokens": 33,
+    "cost_usd": 3.315e-05,
+    "latency_s": 0.9663048259972129,
+    "error": null,
+    "accuracy": 2,
+    "llm_judge_score": 20,
+    "judge_reasoning": "The candidate extraction correctly identifies the company and role. However, the 'years_experience_required' field is null instead of 0, which is a minor formatting issue since the job snippet explicitly states 'no prior experience required,' implying 0 years.",
+    "judge_cost_usd": 0.00133
+  },
+  {
+    "strategy": "zero_shot",
+    "snippet_id": "j06",
+    "raw_response": "```json\n{\n  \"company\": \"Pied Piper Inc.\",\n  \"role\": \"Senior ML Engineer\",\n  \"years_experience_required\": 7\n}\n```",
+    "extracted": {
+      "company": "Pied Piper Inc.",
+      "role": "Senior ML Engineer",
+      "years_experience_required": 7
+    },
+    "parse_success": true,
+    "prompt_tokens": 93,
+    "completion_tokens": 35,
+    "cost_usd": 3.4949999999999996e-05,
+    "latency_s": 0.9429179849976208,
+    "error": null,
+    "accuracy": 3,
+    "llm_judge_score": 15,
+    "judge_reasoning": "Two fields, 'company' and 'role', are correct. However, the 'years_experience_required' field should be null because the snippet states that exceptional candidates with less experience are welcome, making the requirement ambiguous.",
+    "judge_cost_usd": 0.0012875
+  },
+  {
+    "strategy": "zero_shot",
+    "snippet_id": "j07",
+    "raw_response": "```json\n{\n  \"company\": \"Soylent Industries\",\n  \"role\": \"Engineering Manager\",\n  \"years_experience_required\": 3\n}\n```",
+    "extracted": {
+      "company": "Soylent Industries",
+      "role": "Engineering Manager",
+      "years_experience_required": 3
+    },
+    "parse_success": true,
+    "prompt_tokens": 90,
+    "completion_tokens": 33,
+    "cost_usd": 3.3299999999999996e-05,
+    "latency_s": 0.8962883080239408,
+    "error": null,
+    "accuracy": 3,
+    "llm_judge_score": 25,
+    "judge_reasoning": "All three fields in the candidate extraction are correct and fully grounded in the snippet. The company, role, and years of experience required match the information provided in the job snippet.",
+    "judge_cost_usd": 0.00118
+  },
+  {
+    "strategy": "zero_shot",
+    "snippet_id": "j08",
+    "raw_response": "```json\n{\n  \"company\": \"Wonka Confectionery Ltd.\",\n  \"role\": \"Senior UX Researcher\",\n  \"years_experience_required\": 5\n}\n```",
+    "extracted": {
+      "company": "Wonka Confectionery Ltd.",
+      "role": "Senior UX Researcher",
+      "years_experience_required": 5
+    },
+    "parse_success": true,
+    "prompt_tokens": 84,
+    "completion_tokens": 38,
+    "cost_usd": 3.54e-05,
+    "latency_s": 1.0029892360034864,
+    "error": null,
+    "accuracy": 2,
+    "llm_judge_score": 20,
+    "judge_reasoning": "All fields are effectively correct. The only minor issue is the inclusion of a period after 'Ltd' in the company name, which is a very minor formatting detail.",
+    "judge_cost_usd": 0.00117
+  },
+  {
+    "strategy": "zero_shot",
+    "snippet_id": "j09",
+    "raw_response": "```json\n{\n  \"company\": \"Stark Industries\",\n  \"role\": \"Cybersecurity Analyst\",\n  \"years_experience_required\": 3\n}\n```",
+    "extracted": {
+      "company": "Stark Industries",
+      "role": "Cybersecurity Analyst",
+      "years_experience_required": 3
+    },
+    "parse_success": true,
+    "prompt_tokens": 89,
+    "completion_tokens": 34,
+    "cost_usd": 3.3749999999999994e-05,
+    "latency_s": 0.9784903370018583,
+    "error": null,
+    "accuracy": 3,
+    "llm_judge_score": 15,
+    "judge_reasoning": "Two fields, 'company' and 'role', are correct. However, the 'years_experience_required' field is incorrect because the snippet specifies a range of 'three to five years', not a fixed '3' years.",
+    "judge_cost_usd": 0.0012925
+  },
+  {
+    "strategy": "zero_shot",
+    "snippet_id": "j10",
+    "raw_response": "```json\n{\n  \"company\": \"Cyberdyne Systems\",\n  \"role\": \"AI/ML Research Scientist\",\n  \"years_experience_required\": null\n}\n```",
+    "extracted": {
+      "company": "Cyberdyne Systems",
+      "role": "AI/ML Research Scientist",
+      "years_experience_required": null
+    },
+    "parse_success": true,
+    "prompt_tokens": 96,
+    "completion_tokens": 36,
+    "cost_usd": 3.6e-05,
+    "latency_s": 1.4274047759827226,
+    "error": null,
+    "accuracy": 3,
+    "llm_judge_score": 25,
+    "judge_reasoning": "All three fields in the candidate extraction are correct and fully grounded in the snippet. The company, role, and years_experience_required fields match the reference extraction and the information provided in the job snippet.",
+    "judge_cost_usd": 0.0012600000000000003
+  },
+  {
+    "strategy": "few_shot",
+    "snippet_id": "j01",
+    "raw_response": "{\"company\":\"Acme Corp\",\"role\":\"Senior Software Engineer\",\"years_experience_required\":5}",
+    "extracted": {
+      "company": "Acme Corp",
+      "role": "Senior Software Engineer",
+      "years_experience_required": 5
+    },
+    "parse_success": true,
+    "prompt_tokens": 230,
+    "completion_tokens": 20,
+    "cost_usd": 4.65e-05,
+    "latency_s": 1.018742824002402,
+    "error": null,
+    "accuracy": 3,
+    "llm_judge_score": 25,
+    "judge_reasoning": "All three fields in the candidate extraction are correct and fully grounded in the snippet. The company, role, and years of experience required match the reference extraction and the job snippet accurately.",
+    "judge_cost_usd": 0.001185
+  },
+  {
+    "strategy": "few_shot",
+    "snippet_id": "j02",
+    "raw_response": "{\"company\":\"Northwind Ltd\",\"role\":\"Data Analyst\",\"years_experience_required\":2}",
+    "extracted": {
+      "company": "Northwind Ltd",
+      "role": "Data Analyst",
+      "years_experience_required": 2
+    },
+    "parse_success": true,
+    "prompt_tokens": 230,
+    "completion_tokens": 19,
+    "cost_usd": 4.59e-05,
+    "latency_s": 0.9243553540145513,
+    "error": null,
+    "accuracy": 3,
+    "llm_judge_score": 25,
+    "judge_reasoning": "All three fields in the candidate extraction are correct and fully grounded in the snippet. The company, role, and years of experience required match the information provided in the job snippet.",
+    "judge_cost_usd": 0.00117
+  },
+  {
+    "strategy": "few_shot",
+    "snippet_id": "j03",
+    "raw_response": "{\"company\":\"Globex International\",\"role\":\"Product Manager - Growth\",\"years_experience_required\":4}",
+    "extracted": {
+      "company": "Globex International",
+      "role": "Product Manager - Growth",
+      "years_experience_required": 4
+    },
+    "parse_success": true,
+    "prompt_tokens": 235,
+    "completion_tokens": 21,
+    "cost_usd": 4.785e-05,
+    "latency_s": 0.9238130890007596,
+    "error": null,
+    "accuracy": 3,
+    "llm_judge_score": 25,
+    "judge_reasoning": "All three fields in the candidate extraction are correct and fully grounded in the job snippet. The company, role, and years of experience required match exactly with the reference extraction and the snippet.",
+    "judge_cost_usd": 0.0012125
+  },
+  {
+    "strategy": "few_shot",
+    "snippet_id": "j04",
+    "raw_response": "{\"company\":\"Initech\",\"role\":\"Lead DevOps Engineer\",\"years_experience_required\":6}",
+    "extracted": {
+      "company": "Initech",
+      "role": "Lead DevOps Engineer",
+      "years_experience_required": 6
+    },
+    "parse_success": true,
+    "prompt_tokens": 236,
+    "completion_tokens": 20,
+    "cost_usd": 4.74e-05,
+    "latency_s": 0.8631927560199983,
+    "error": null,
+    "accuracy": 3,
+    "llm_judge_score": 25,
+    "judge_reasoning": "All three fields in the candidate extraction are correct and fully grounded in the snippet. The company, role, and years of experience required match the information provided in the job snippet.",
+    "judge_cost_usd": 0.00119
+  },
+  {
+    "strategy": "few_shot",
+    "snippet_id": "j05",
+    "raw_response": "{\"company\":\"Hooli\",\"role\":\"Junior Frontend Developer\",\"years_experience_required\":0}",
+    "extracted": {
+      "company": "Hooli",
+      "role": "Junior Frontend Developer",
+      "years_experience_required": 0
+    },
+    "parse_success": true,
+    "prompt_tokens": 233,
+    "completion_tokens": 20,
+    "cost_usd": 4.6949999999999996e-05,
+    "latency_s": 0.9448767069843598,
+    "error": null,
+    "accuracy": 3,
+    "llm_judge_score": 25,
+    "judge_reasoning": "All three fields in the candidate extraction are correct and fully grounded in the snippet. The company, role, and years_experience_required match the reference extraction and the job snippet accurately.",
+    "judge_cost_usd": 0.0011925
+  },
+  {
+    "strategy": "few_shot",
+    "snippet_id": "j06",
+    "raw_response": "{\"company\":\"Pied Piper Inc.\",\"role\":\"Senior ML Engineer\",\"years_experience_required\":7}",
+    "extracted": {
+      "company": "Pied Piper Inc.",
+      "role": "Senior ML Engineer",
+      "years_experience_required": 7
+    },
+    "parse_success": true,
+    "prompt_tokens": 237,
+    "completion_tokens": 21,
+    "cost_usd": 4.815e-05,
+    "latency_s": 0.8567628590099048,
+    "error": null,
+    "accuracy": 3,
+    "llm_judge_score": 15,
+    "judge_reasoning": "Two fields, 'company' and 'role', are correct. However, the 'years_experience_required' field should be null because the snippet states that exceptional candidates with less experience are welcome, making the requirement ambiguous.",
+    "judge_cost_usd": 0.0012875
+  },
+  {
+    "strategy": "few_shot",
+    "snippet_id": "j07",
+    "raw_response": "{\"company\":\"Soylent Industries\",\"role\":\"Engineering Manager\",\"years_experience_required\":3}",
+    "extracted": {
+      "company": "Soylent Industries",
+      "role": "Engineering Manager",
+      "years_experience_required": 3
+    },
+    "parse_success": true,
+    "prompt_tokens": 234,
+    "completion_tokens": 19,
+    "cost_usd": 4.65e-05,
+    "latency_s": 0.9829961989889853,
+    "error": null,
+    "accuracy": 3,
+    "llm_judge_score": 25,
+    "judge_reasoning": "All three fields in the candidate extraction are correct and fully grounded in the snippet. The company, role, and years of experience required match the information provided in the job snippet.",
+    "judge_cost_usd": 0.00118
+  },
+  {
+    "strategy": "few_shot",
+    "snippet_id": "j08",
+    "raw_response": "{\"company\":\"Wonka Confectionery Ltd\",\"role\":\"Senior UX Researcher\",\"years_experience_required\":5}",
+    "extracted": {
+      "company": "Wonka Confectionery Ltd",
+      "role": "Senior UX Researcher",
+      "years_experience_required": 5
+    },
+    "parse_success": true,
+    "prompt_tokens": 228,
+    "completion_tokens": 24,
+    "cost_usd": 4.8599999999999995e-05,
+    "latency_s": 0.8653287350025494,
+    "error": null,
+    "accuracy": 3,
+    "llm_judge_score": 25,
+    "judge_reasoning": "All three fields in the candidate extraction are correct and fully grounded in the snippet. The company, role, and years of experience required match the reference extraction and the job snippet accurately.",
+    "judge_cost_usd": 0.0012000000000000001
+  },
+  {
+    "strategy": "few_shot",
+    "snippet_id": "j09",
+    "raw_response": "{\"company\":\"Stark Industries\",\"role\":\"Cybersecurity Analyst\",\"years_experience_required\":3}",
+    "extracted": {
+      "company": "Stark Industries",
+      "role": "Cybersecurity Analyst",
+      "years_experience_required": 3
+    },
+    "parse_success": true,
+    "prompt_tokens": 233,
+    "completion_tokens": 20,
+    "cost_usd": 4.6949999999999996e-05,
+    "latency_s": 0.8166647659963928,
+    "error": null,
+    "accuracy": 3,
+    "llm_judge_score": 20,
+    "judge_reasoning": "All three fields are effectively correct. The years_experience_required field is consistent with the snippet's 'Three to five years' requirement, but the reference extraction chose the lower bound of the range, which is a minor detail issue.",
+    "judge_cost_usd": 0.0012925
+  },
+  {
+    "strategy": "few_shot",
+    "snippet_id": "j10",
+    "raw_response": "{\"company\":\"Cyberdyne Systems\",\"role\":\"AI/ML Research Scientist\",\"years_experience_required\":null}",
+    "extracted": {
+      "company": "Cyberdyne Systems",
+      "role": "AI/ML Research Scientist",
+      "years_experience_required": null
+    },
+    "parse_success": true,
+    "prompt_tokens": 240,
+    "completion_tokens": 23,
+    "cost_usd": 4.9800000000000004e-05,
+    "latency_s": 1.205010959005449,
+    "error": null,
+    "accuracy": 3,
+    "llm_judge_score": 25,
+    "judge_reasoning": "All three fields in the candidate extraction are correct and fully grounded in the snippet. The company, role, and years_experience_required fields match the reference extraction and the information provided in the job snippet.",
+    "judge_cost_usd": 0.0012600000000000003
+  },
+  {
+    "strategy": "structured",
+    "snippet_id": "j01",
+    "raw_response": "{\n  \"company\": \"Acme Corp\",\n  \"role\": \"Senior Software Engineer\",\n  \"years_experience_required\": 5\n}",
+    "extracted": {
+      "company": "Acme Corp",
+      "role": "Senior Software Engineer",
+      "years_experience_required": 5
+    },
+    "parse_success": true,
+    "prompt_tokens": 230,
+    "completion_tokens": 30,
+    "cost_usd": 5.25e-05,
+    "latency_s": 0.7512503460166045,
+    "error": null,
+    "accuracy": 3,
+    "llm_judge_score": 25,
+    "judge_reasoning": "All three fields in the candidate extraction are correct and fully grounded in the snippet. The company, role, and years of experience required match the information provided in the job snippet.",
+    "judge_cost_usd": 0.001175
+  },
+  {
+    "strategy": "structured",
+    "snippet_id": "j02",
+    "raw_response": "{\n  \"company\": \"Northwind Ltd.\",\n  \"role\": \"Data Analyst\",\n  \"years_experience_required\": 2\n}",
+    "extracted": {
+      "company": "Northwind Ltd.",
+      "role": "Data Analyst",
+      "years_experience_required": 2
+    },
+    "parse_success": true,
+    "prompt_tokens": 230,
+    "completion_tokens": 29,
+    "cost_usd": 5.19e-05,
+    "latency_s": 0.7796298230241518,
+    "error": null,
+    "accuracy": 2,
+    "llm_judge_score": 20,
+    "judge_reasoning": "All three fields are effectively correct. The only issue is a minor formatting difference in the company name, where the candidate extraction includes a period after 'Ltd', which is not present in the reference extraction.",
+    "judge_cost_usd": 0.0012200000000000002
+  },
+  {
+    "strategy": "structured",
+    "snippet_id": "j03",
+    "raw_response": "{\n  \"company\": \"Globex International\",\n  \"role\": \"Product Manager - Growth\",\n  \"years_experience_required\": 3\n}",
+    "extracted": {
+      "company": "Globex International",
+      "role": "Product Manager - Growth",
+      "years_experience_required": 3
+    },
+    "parse_success": true,
+    "prompt_tokens": 235,
+    "completion_tokens": 31,
+    "cost_usd": 5.3849999999999994e-05,
+    "latency_s": 1.0354986480087973,
+    "error": null,
+    "accuracy": 2,
+    "llm_judge_score": 15,
+    "judge_reasoning": "Two fields, 'company' and 'role', are correct. However, the 'years_experience_required' is incorrect as it should be 4, not 3, according to the snippet.",
+    "judge_cost_usd": 0.0012425000000000001
+  },
+  {
+    "strategy": "structured",
+    "snippet_id": "j04",
+    "raw_response": "{\n  \"company\": \"Initech\",\n  \"role\": \"Lead DevOps Engineer\",\n  \"years_experience_required\": 6\n}",
+    "extracted": {
+      "company": "Initech",
+      "role": "Lead DevOps Engineer",
+      "years_experience_required": 6
+    },
+    "parse_success": true,
+    "prompt_tokens": 236,
+    "completion_tokens": 30,
+    "cost_usd": 5.34e-05,
+    "latency_s": 0.7637815389898606,
+    "error": null,
+    "accuracy": 3,
+    "llm_judge_score": 25,
+    "judge_reasoning": "All three fields in the candidate extraction are correct and fully grounded in the snippet. The company, role, and years of experience required match the information provided in the job snippet.",
+    "judge_cost_usd": 0.00119
+  },
+  {
+    "strategy": "structured",
+    "snippet_id": "j05",
+    "raw_response": "{\n  \"company\": \"Hooli\",\n  \"role\": \"Junior Frontend Developer\",\n  \"years_experience_required\": 0\n}",
+    "extracted": {
+      "company": "Hooli",
+      "role": "Junior Frontend Developer",
+      "years_experience_required": 0
+    },
+    "parse_success": true,
+    "prompt_tokens": 233,
+    "completion_tokens": 30,
+    "cost_usd": 5.295e-05,
+    "latency_s": 0.8381426680134609,
+    "error": null,
+    "accuracy": 3,
+    "llm_judge_score": 25,
+    "judge_reasoning": "All three fields in the candidate extraction are correct and fully grounded in the snippet. The company, role, and years_experience_required match the reference extraction and the job snippet accurately.",
+    "judge_cost_usd": 0.0011925
+  },
+  {
+    "strategy": "structured",
+    "snippet_id": "j06",
+    "raw_response": "{\n  \"company\": \"Pied Piper Inc.\",\n  \"role\": \"Senior ML Engineer\",\n  \"years_experience_required\": 7\n}",
+    "extracted": {
+      "company": "Pied Piper Inc.",
+      "role": "Senior ML Engineer",
+      "years_experience_required": 7
+    },
+    "parse_success": true,
+    "prompt_tokens": 237,
+    "completion_tokens": 31,
+    "cost_usd": 5.4149999999999995e-05,
+    "latency_s": 0.8284633709990885,
+    "error": null,
+    "accuracy": 3,
+    "llm_judge_score": 15,
+    "judge_reasoning": "Two fields, 'company' and 'role', are correct. However, the 'years_experience_required' field should be null because the snippet states that exceptional candidates with less experience are welcome, making the requirement ambiguous.",
+    "judge_cost_usd": 0.0012875
+  },
+  {
+    "strategy": "structured",
+    "snippet_id": "j07",
+    "raw_response": "{\n  \"company\": \"Soylent Industries\",\n  \"role\": \"Engineering Manager\",\n  \"years_experience_required\": 3\n}",
+    "extracted": {
+      "company": "Soylent Industries",
+      "role": "Engineering Manager",
+      "years_experience_required": 3
+    },
+    "parse_success": true,
+    "prompt_tokens": 234,
+    "completion_tokens": 29,
+    "cost_usd": 5.25e-05,
+    "latency_s": 0.8950263510050718,
+    "error": null,
+    "accuracy": 3,
+    "llm_judge_score": 25,
+    "judge_reasoning": "All three fields in the candidate extraction are correct and fully grounded in the snippet. The company, role, and years of experience required match the information provided in the job snippet.",
+    "judge_cost_usd": 0.00118
+  },
+  {
+    "strategy": "structured",
+    "snippet_id": "j08",
+    "raw_response": "{\n  \"company\": \"Wonka Confectionery Ltd.\",\n  \"role\": \"Senior UX Researcher\",\n  \"years_experience_required\": 5\n}",
+    "extracted": {
+      "company": "Wonka Confectionery Ltd.",
+      "role": "Senior UX Researcher",
+      "years_experience_required": 5
+    },
+    "parse_success": true,
+    "prompt_tokens": 228,
+    "completion_tokens": 34,
+    "cost_usd": 5.46e-05,
+    "latency_s": 0.8183982729970012,
+    "error": null,
+    "accuracy": 2,
+    "llm_judge_score": 20,
+    "judge_reasoning": "All three fields are effectively correct. The only minor issue is the inclusion of a period after 'Ltd' in the company name, which is a very minor formatting detail.",
+    "judge_cost_usd": 0.00118
+  },
+  {
+    "strategy": "structured",
+    "snippet_id": "j09",
+    "raw_response": "{\n  \"company\": \"Stark Industries\",\n  \"role\": \"Cybersecurity Analyst\",\n  \"years_experience_required\": 3\n}",
+    "extracted": {
+      "company": "Stark Industries",
+      "role": "Cybersecurity Analyst",
+      "years_experience_required": 3
+    },
+    "parse_success": true,
+    "prompt_tokens": 233,
+    "completion_tokens": 30,
+    "cost_usd": 5.295e-05,
+    "latency_s": 0.7600123820011504,
+    "error": null,
+    "accuracy": 3,
+    "llm_judge_score": 20,
+    "judge_reasoning": "The candidate extraction is almost perfect, matching the company and role exactly with the reference extraction. However, the years_experience_required field should be null as per the instructions for j10, since the snippet provides a range rather than a specific number of years.",
+    "judge_cost_usd": 0.0013425
+  },
+  {
+    "strategy": "structured",
+    "snippet_id": "j10",
+    "raw_response": "{\n  \"company\": \"Cyberdyne Systems\",\n  \"role\": \"AI/ML Research Scientist\",\n  \"years_experience_required\": null\n}",
+    "extracted": {
+      "company": "Cyberdyne Systems",
+      "role": "AI/ML Research Scientist",
+      "years_experience_required": null
+    },
+    "parse_success": true,
+    "prompt_tokens": 240,
+    "completion_tokens": 32,
+    "cost_usd": 5.52e-05,
+    "latency_s": 0.7589705839927774,
+    "error": null,
+    "accuracy": 3,
+    "llm_judge_score": 25,
+    "judge_reasoning": "All three fields in the candidate extraction are correct and fully grounded in the snippet. The company, role, and years_experience_required fields match the reference extraction and the information provided in the job snippet.",
+    "judge_cost_usd": 0.0012600000000000003
+  },
+  {
+    "strategy": "cot",
+    "snippet_id": "j01",
+    "raw_response": "{\n  \"company\": \"Acme Corp\",\n  \"role\": \"Senior Software Engineer\",\n  \"years_experience_required\": 5\n}",
+    "extracted": {
+      "company": "Acme Corp",
+      "role": "Senior Software Engineer",
+      "years_experience_required": 5
+    },
+    "parse_success": true,
+    "prompt_tokens": 148,
+    "completion_tokens": 30,
+    "cost_usd": 4.02e-05,
+    "latency_s": 0.7537658780056518,
+    "error": null,
+    "accuracy": 3,
+    "llm_judge_score": 25,
+    "judge_reasoning": "All three fields in the candidate extraction are correct and fully grounded in the snippet. The company, role, and years of experience required match the reference extraction and the job snippet accurately.",
+    "judge_cost_usd": 0.001185
+  },
+  {
+    "strategy": "cot",
+    "snippet_id": "j02",
+    "raw_response": "{\n  \"company\": \"Northwind Ltd.\",\n  \"role\": \"Data Analyst\",\n  \"years_experience_required\": 2\n}",
+    "extracted": {
+      "company": "Northwind Ltd.",
+      "role": "Data Analyst",
+      "years_experience_required": 2
+    },
+    "parse_success": true,
+    "prompt_tokens": 148,
+    "completion_tokens": 29,
+    "cost_usd": 3.96e-05,
+    "latency_s": 0.873301689978689,
+    "error": null,
+    "accuracy": 2,
+    "llm_judge_score": 20,
+    "judge_reasoning": "The candidate extraction is effectively correct with only a very minor formatting issue. The company name includes a period ('Ltd.'), which is a minor detail compared to the reference extraction ('Ltd'). The role and years of experience are correctly extracted.",
+    "judge_cost_usd": 0.0012900000000000001
+  },
+  {
+    "strategy": "cot",
+    "snippet_id": "j03",
+    "raw_response": "{\n  \"company\": \"Globex International\",\n  \"role\": \"Product Manager - Growth\",\n  \"years_experience_required\": 4\n}",
+    "extracted": {
+      "company": "Globex International",
+      "role": "Product Manager - Growth",
+      "years_experience_required": 4
+    },
+    "parse_success": true,
+    "prompt_tokens": 153,
+    "completion_tokens": 31,
+    "cost_usd": 4.1549999999999994e-05,
+    "latency_s": 0.7225989350117743,
+    "error": null,
+    "accuracy": 3,
+    "llm_judge_score": 25,
+    "judge_reasoning": "All three fields in the candidate extraction are correct and fully grounded in the job snippet. The company, role, and years of experience required match exactly with the reference extraction and the provided snippet.",
+    "judge_cost_usd": 0.0012225
+  },
+  {
+    "strategy": "cot",
+    "snippet_id": "j04",
+    "raw_response": "{\n  \"company\": \"Initech\",\n  \"role\": \"Lead DevOps Engineer\",\n  \"years_experience_required\": 6\n}",
+    "extracted": {
+      "company": "Initech",
+      "role": "Lead DevOps Engineer",
+      "years_experience_required": 6
+    },
+    "parse_success": true,
+    "prompt_tokens": 154,
+    "completion_tokens": 30,
+    "cost_usd": 4.1099999999999996e-05,
+    "latency_s": 0.7429597580048721,
+    "error": null,
+    "accuracy": 3,
+    "llm_judge_score": 25,
+    "judge_reasoning": "All three fields in the candidate extraction are correct and fully grounded in the snippet. The company, role, and years of experience required match the reference extraction and the job snippet accurately.",
+    "judge_cost_usd": 0.0012000000000000001
+  },
+  {
+    "strategy": "cot",
+    "snippet_id": "j05",
+    "raw_response": "{\n  \"company\": \"Hooli\",\n  \"role\": \"Junior Frontend Developer\",\n  \"years_experience_required\": 0\n}",
+    "extracted": {
+      "company": "Hooli",
+      "role": "Junior Frontend Developer",
+      "years_experience_required": 0
+    },
+    "parse_success": true,
+    "prompt_tokens": 151,
+    "completion_tokens": 30,
+    "cost_usd": 4.065e-05,
+    "latency_s": 1.7290096420038026,
+    "error": null,
+    "accuracy": 3,
+    "llm_judge_score": 25,
+    "judge_reasoning": "All three fields in the candidate extraction are correct and fully grounded in the snippet. The company, role, and years_experience_required match the reference extraction and the job snippet accurately.",
+    "judge_cost_usd": 0.0011925
+  },
+  {
+    "strategy": "cot",
+    "snippet_id": "j06",
+    "raw_response": "{\n  \"company\": \"Pied Piper Inc.\",\n  \"role\": \"Senior ML Engineer\",\n  \"years_experience_required\": 7\n}",
+    "extracted": {
+      "company": "Pied Piper Inc.",
+      "role": "Senior ML Engineer",
+      "years_experience_required": 7
+    },
+    "parse_success": true,
+    "prompt_tokens": 155,
+    "completion_tokens": 31,
+    "cost_usd": 4.185e-05,
+    "latency_s": 0.756320496002445,
+    "error": null,
+    "accuracy": 3,
+    "llm_judge_score": 15,
+    "judge_reasoning": "Two fields, 'company' and 'role', are correct. However, the 'years_experience_required' field should be null because the snippet states that exceptional candidates with less experience are welcome, making the requirement ambiguous.",
+    "judge_cost_usd": 0.0012875
+  },
+  {
+    "strategy": "cot",
+    "snippet_id": "j07",
+    "raw_response": "{\n  \"company\": \"Soylent Industries\",\n  \"role\": \"Engineering Manager\",\n  \"years_experience_required\": 3\n}",
+    "extracted": {
+      "company": "Soylent Industries",
+      "role": "Engineering Manager",
+      "years_experience_required": 3
+    },
+    "parse_success": true,
+    "prompt_tokens": 152,
+    "completion_tokens": 29,
+    "cost_usd": 4.02e-05,
+    "latency_s": 0.7543599370110314,
+    "error": null,
+    "accuracy": 3,
+    "llm_judge_score": 25,
+    "judge_reasoning": "All three fields in the candidate extraction are correct and fully grounded in the snippet. The company, role, and years of experience required match the information provided in the job snippet.",
+    "judge_cost_usd": 0.00118
+  },
+  {
+    "strategy": "cot",
+    "snippet_id": "j08",
+    "raw_response": "{\n  \"company\": \"Wonka Confectionery Ltd.\",\n  \"role\": \"Senior UX Researcher\",\n  \"years_experience_required\": 5\n}",
+    "extracted": {
+      "company": "Wonka Confectionery Ltd.",
+      "role": "Senior UX Researcher",
+      "years_experience_required": 5
+    },
+    "parse_success": true,
+    "prompt_tokens": 146,
+    "completion_tokens": 34,
+    "cost_usd": 4.23e-05,
+    "latency_s": 0.8701721699908376,
+    "error": null,
+    "accuracy": 2,
+    "llm_judge_score": 20,
+    "judge_reasoning": "All three fields are effectively correct. The only issue is a very minor formatting difference with the period after 'Ltd' in the company name, which does not materially affect the extraction.",
+    "judge_cost_usd": 0.0012000000000000001
+  },
+  {
+    "strategy": "cot",
+    "snippet_id": "j09",
+    "raw_response": "{\n  \"company\": \"Stark Industries\",\n  \"role\": \"Cybersecurity Analyst\",\n  \"years_experience_required\": 3\n}",
+    "extracted": {
+      "company": "Stark Industries",
+      "role": "Cybersecurity Analyst",
+      "years_experience_required": 3
+    },
+    "parse_success": true,
+    "prompt_tokens": 151,
+    "completion_tokens": 30,
+    "cost_usd": 4.065e-05,
+    "latency_s": 0.9625685970240738,
+    "error": null,
+    "accuracy": 3,
+    "llm_judge_score": 20,
+    "judge_reasoning": "The candidate extraction is almost perfect, matching the company and role exactly with the reference extraction. However, the years_experience_required field should be null as per the instructions for j10, since the snippet provides a range rather than a specific number of years.",
+    "judge_cost_usd": 0.0013425
+  },
+  {
+    "strategy": "cot",
+    "snippet_id": "j10",
+    "raw_response": "{\n  \"company\": \"Cyberdyne Systems\",\n  \"role\": \"AI/ML Research Scientist\",\n  \"years_experience_required\": null\n}",
+    "extracted": {
+      "company": "Cyberdyne Systems",
+      "role": "AI/ML Research Scientist",
+      "years_experience_required": null
+    },
+    "parse_success": true,
+    "prompt_tokens": 158,
+    "completion_tokens": 32,
+    "cost_usd": 4.29e-05,
+    "latency_s": 0.8396118910168298,
+    "error": null,
+    "accuracy": 3,
+    "llm_judge_score": 25,
+    "judge_reasoning": "All three fields in the candidate extraction are correct and fully grounded in the snippet. The company, role, and years_experience_required fields match the reference extraction and the information provided in the job snippet.",
+    "judge_cost_usd": 0.0012600000000000003
+  }
+]

@@ -1,0 +1,5 @@
+strategy,accuracy,parse_rate,judge_score,cost_usd,judge_cost_usd,latency_p50_s,total_cost_usd
+zero_shot,2.7,100.0,21.5,0.000341,0.012368,0.991,0.012709
+few_shot,3.0,100.0,23.5,0.000475,0.01217,0.924,0.012645
+structured,2.7,100.0,21.5,0.000534,0.01227,0.799,0.012804
+cot,2.8,100.0,22.5,0.000411,0.01236,0.798,0.012771
